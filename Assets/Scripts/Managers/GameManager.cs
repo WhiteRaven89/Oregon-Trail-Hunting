@@ -9,7 +9,7 @@ public class GameManager : Singleton<GameManager>
 
     public GameObject CurrentLevel { get; set; }
 
-    public bool GameIsPaused { get { return Time.deltaTime == 0f; } }
+    public static bool GameIsPaused { get { return Time.deltaTime == 0f; } }
 
     public int ShotsFired { get; set; }
     public int AnimalsKilled { get; set; }

@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     protected Transform _firePoint;
 
-    public static event Func<Vector3, IEnumerator> OnFire;
+    public static event Func<Vector2, IEnumerator> OnFire;
 
     [SerializeField]
     protected float _fireRate;
@@ -24,10 +24,10 @@ public class Weapon : MonoBehaviour
         Statistics.OnDisplay += Disable;
 
         _firePoint.gameObject.SetActive(true);
-        _firePoint.localPosition = new Vector2(0f, -1.25f);
+        _firePoint.localPosition = Vector2.up * -1.25f;
     }
 
-    protected virtual void Fire(Vector3 target)
+    protected virtual void Fire(Vector2 target)
     {
         GameObject go = null;
 

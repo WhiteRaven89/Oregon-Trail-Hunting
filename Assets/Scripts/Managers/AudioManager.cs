@@ -35,7 +35,6 @@ public class AudioManager : Singleton<AudioManager>
 
         s.source.volume = s.volume;
         s.source.pitch = s.pitch;
-
         s.source.Play();
     }
 

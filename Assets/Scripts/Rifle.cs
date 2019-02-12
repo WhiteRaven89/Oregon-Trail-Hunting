@@ -9,14 +9,11 @@ public class Rifle : Weapon
 
     private void OnMouseDown()
     {
-        Vector3 target = Input.mousePosition;
-
-        target = Camera.main.ScreenToWorldPoint(target);
-
+        Vector2 target = Cam.Main.ScreenToWorldPoint(Input.mousePosition);
         Fire(target);
     }
 
-    protected override void Fire(Vector3 target)
+    protected override void Fire(Vector2 target)
     {
         if (Time.time >= _nextTimeToFire)
         {

@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 53a93a333843ce146aa6abbba429f5bd
+guid: e9c994c317c686749be23748fcc05595
 TextureImporter:
   fileIDToRecycleName:
     21300000: face_0
     21300002: face_1
     21300004: face_2
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -24,6 +24,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -34,7 +36,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -81,17 +83,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -110,7 +101,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5af628fcd43eac240a2065309e2906b7
+      spriteID: 8c5f79c9fd727b24cba0c4f73c3f96ce
       vertices: []
       indices: 
       edges: []
@@ -130,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50561bba4cb298e459f68abdea16f31a
+      spriteID: 28f9e06d9d3ab0f43b9a346aa50944ef
       vertices: []
       indices: 
       edges: []
@@ -150,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d375aeb0ef68f4f949f5dc0e1f7ff0
+      spriteID: 6f2b001581d03784a897407a67bef36f
       vertices: []
       indices: 
       edges: []
@@ -158,12 +149,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f10e8b566acdbc44e923150adbd6e222
+    spriteID: 4a01b774bc666174190e40369fe4a221
     vertices: []
     indices: 
     edges: []
     weights: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

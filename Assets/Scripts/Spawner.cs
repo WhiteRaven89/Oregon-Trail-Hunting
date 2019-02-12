@@ -2,14 +2,12 @@
 using System.Linq;
 using UnityEngine;
 
-#pragma warning disable 649
-
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
     private float _spawnDelay;
 
-    private float nextTimeToSpawn;
+    private float _nextTimeToSpawn;
 
     [SerializeField]
     private bool _dynamicScaling;
@@ -22,10 +20,10 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (nextTimeToSpawn <= Time.time)
+        if (_nextTimeToSpawn <= Time.time)
         {
             Spawn();
-            nextTimeToSpawn = Time.time + _spawnDelay;
+            _nextTimeToSpawn = Time.time + _spawnDelay;
         }
     }
 
@@ -49,6 +47,9 @@ public class Spawner : MonoBehaviour
         {
             go = Instantiate(animal, spawnPoint.position, spawnPoint.rotation, GameManager.Instance.CurrentLevel.transform);
             go.name = animal.name;
+
+            if (!ObjectPool.Pool.Keys.Contains(go.name))
+                ObjectPool.Pool.Add(go.name, go);
         }
 
         if (_dynamicScaling)
@@ -61,27 +62,23 @@ public class Spawner : MonoBehaviour
     {
         int position = (randomPosition % (_spawnPoints.Length / 2)) + 1;
         float scale = position * .5f;
-
-        animal.transform.localScale = new Vector2(scale, scale);
+        animal.transform.localScale = Vector2.one * scale;
     }
 
-    private IEnumerator Disable(GameObject go, float time)
+    private IEnumerator Disable(GameObject objInScene, float time)
     {
         yield return new WaitForSeconds(time);
 
-        var pool = ObjectPool.Pool;
+        var poolObject = ObjectPool.Find(objInScene);
 
-        if (!pool.Keys.Contains(go.name))
-            pool.Add(go.name, go);
-
-        var other = ObjectPool.Find(go);
-
-        if (other)
+        if (poolObject)
         {
-            if (go != other)
-                Destroy(go);
+            //If the object is from the pool, deactivate it so that it can be pooled again.
+            if (objInScene == poolObject)
+                objInScene.SetActive(false);
+            //Otherwise, it's just a clone that can be deleted.
             else
-                go.SetActive(false);
+                Destroy(objInScene);
         }
     }
 

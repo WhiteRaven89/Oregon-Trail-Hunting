@@ -41,14 +41,14 @@ public class ChainGun : Weapon
 
     private void OnMouseOver()
     {
-        if (GameManager.Instance.GameIsPaused)
+        if (GameManager.GameIsPaused)
             return;
 
         Cursor.visible = false;
 
         if (Input.GetMouseButton(0) && Ammo != 0)
         {
-            Fire(new Vector2(_firePoint.position.x, 1f));
+            Fire(new Vector2(_firePoint.position.x, .75f));
         }
         else
         {
@@ -57,20 +57,15 @@ public class ChainGun : Weapon
         }
 
         FollowMouse();
-
     }
 
     private void FollowMouse()
     {
-        Vector2 mousePos = Input.mousePosition;
-
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-        transform.localPosition = new Vector2(mousePos.x, 0f);
-
+        Vector2 mousePos = Cam.Main.ScreenToWorldPoint(Input.mousePosition);
+        transform.localPosition = Vector2.right * mousePos.x;
     }
 
-    protected override void Fire(Vector3 target)
+    protected override void Fire(Vector2 target)
     {
         if (Time.time >= _nextTimeToFire)
         {
