@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField]
-    private float _spawnDelay;
 
-    private float _nextTimeToSpawn;
+    [SerializeField]
+    private float _timeToSpawn;
+
+    [SerializeField]
+    private float _spawnRate;
 
     [SerializeField]
     private bool _dynamicScaling;
@@ -18,13 +20,9 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private Transform[] _spawnPoints;
 
-    private void Update()
+    private void Start()
     {
-        if (_nextTimeToSpawn <= Time.time)
-        {
-            Spawn();
-            _nextTimeToSpawn = Time.time + _spawnDelay;
-        }
+        InvokeRepeating("Spawn", _timeToSpawn, _spawnRate);
     }
 
     private void Spawn()
