@@ -8,9 +8,9 @@ public class Animal : MonoBehaviour
     [SerializeField]
     private GameObject _deathPrefab;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.Translate(Vector2.right * (_speed * Time.fixedDeltaTime));
+        transform.Translate(Vector2.right * (_speed * Time.deltaTime));
     }
 
     public void Death()

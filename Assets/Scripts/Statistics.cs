@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Statistics : MonoBehaviour
 {
-
     public static event Action OnDisplay;
 
     private void Start()
@@ -35,7 +34,7 @@ public class Statistics : MonoBehaviour
 
     private void SetText(float stat, string name, bool useFormat = false)
     {
-        TextMeshProUGUI text = transform.Find(name).GetComponent<TextMeshProUGUI>();
+        var text = transform.Find(name).GetComponent<TextMeshProUGUI>();
 
         if (useFormat)
             text.text = stat.ToString("F0") + "%";

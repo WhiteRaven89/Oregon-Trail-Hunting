@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Animal"))
         {
-            Animal animal = other.GetComponent<Animal>();
+            var animal = other.GetComponent<Animal>();
             animal.Death();
             GameManager.Instance.AnimalsKilled++;
             gameObject.SetActive(false);

@@ -8,8 +8,7 @@ public class CursorBehavior : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        Vector2 cursorHotspot = new Vector2(_cursor.width / 2, _cursor.height / 2);
-
+        var cursorHotspot = new Vector2(_cursor.width / 2, _cursor.height / 2);
         Cursor.SetCursor(_cursor, cursorHotspot, CursorMode.ForceSoftware);
     }
 

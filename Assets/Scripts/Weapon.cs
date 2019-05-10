@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour
         _firePoint.gameObject.SetActive(true);
         _firePoint.localPosition = Vector2.up * -1.25f;
     }
-
+    
     protected virtual void Fire(Vector2 target)
     {
         GameObject go = null;
@@ -53,10 +53,10 @@ public class Weapon : MonoBehaviour
 
         GameManager.Instance.ShotsFired++;
     }
-
+    
     protected virtual void Move(int sceneIndex)
     {
-        Transform scene = GameManager.Instance.CurrentLevel.transform.GetChild(0).GetChild(sceneIndex).transform;
+        var scene = GameManager.Instance.CurrentLevel.transform.GetChild(0).GetChild(sceneIndex).transform;
         transform.localPosition = new Vector2(scene.localPosition.x, transform.localPosition.y);
     }
 

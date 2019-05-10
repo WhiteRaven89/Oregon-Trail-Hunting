@@ -2,7 +2,6 @@
 
 public class ChainGun : Weapon
 {
-
     [SerializeField]
     private GameObject _barrel, _muzzleFlash;
 
@@ -12,14 +11,8 @@ public class ChainGun : Weapon
 
     public int Ammo
     {
-        get
-        {
-            return _ammo;
-        }
-        set
-        {
-            _ammo = Mathf.Clamp(value, 0, 999);
-        }
+        get => _ammo;
+        set => _ammo = Mathf.Clamp(value, 0, 999);
     }
 
     private void Start()
@@ -28,7 +21,6 @@ public class ChainGun : Weapon
         _barrelAnimator.speed = 0f;
 
         Ammo = 999;
-
     }
 
     protected override void OnEnable()

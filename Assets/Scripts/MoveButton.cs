@@ -23,14 +23,14 @@ public class MoveButton : MonoBehaviour
        if (GameManager.GameIsPaused)
             return;
 
-        Scene(_index).SetActive(false);
+        GetCurrentScene(_index).SetActive(false);
         _index = ++_index % _sceneCount;
-        Scene(_index).SetActive(true);
+        GetCurrentScene(_index).SetActive(true);
 
         OnMove?.Invoke(_index);
     }
 
-    private GameObject Scene(int currentScene)
+    private GameObject GetCurrentScene(int currentScene)
     {
         return GameManager.Instance.CurrentLevel.transform.GetChild(0).GetChild(currentScene).gameObject;
     }

@@ -3,18 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-
     [SerializeField]
     private GameObject _world;
 
     public GameObject CurrentLevel { get; set; }
 
-    public static bool GameIsPaused { get { return Time.deltaTime == 0f; } }
+    public static bool GameIsPaused { get => Time.deltaTime == 0f; }
 
     public int ShotsFired { get; set; }
     public int AnimalsKilled { get; set; }
 
-    public float Accuracy { get { return ShotsFired > 0 ? AnimalsKilled / (float)ShotsFired * 100 : 0; } }
+    public float Accuracy { get => ShotsFired > 0 ? AnimalsKilled / (float)ShotsFired * 100 : 0; }
 
     protected override void Awake()
     {
@@ -31,7 +30,10 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    //Deactivates the world, as well as everything inside of it (children, grandchildren, etc.)
+    /// <summary>
+    /// Deactivates the world, as well as everything inside of it (children, grandchildren, etc.)
+    /// </summary>
+    /// <param name="world"></param>
     private void DeactivateRecursively(GameObject world)
     {
         world.SetActive(false);
@@ -43,7 +45,10 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    //Gets called when the user selects a level.
+    /// <summary>
+    /// Gets called when the user selects a level
+    /// </summary>
+    /// <param name="levelChosen"></param>
     public void ChooseLevel(GameObject levelChosen)
     {
         levelChosen.SetActive(true);

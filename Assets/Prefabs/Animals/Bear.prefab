@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 114838371314655224}
   - component: {fileID: 2688162038989961041}
   - component: {fileID: 212395328456970626}
-  - component: {fileID: 60841268049245140}
-  - component: {fileID: 50669140707681658}
+  - component: {fileID: 2849318147666971517}
   m_Layer: 2
   m_Name: Bear
   m_TagString: Animal
@@ -122,8 +121,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &60841268049245140
-PolygonCollider2D:
+--- !u!61 &2849318147666971517
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -145,40 +144,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.22247908, y: -0.05203025}
-      - {x: 0.22303042, y: 0.093080536}
-      - {x: 0.13483262, y: 0.10423822}
-      - {x: -0.15173566, y: 0.13151892}
-      - {x: -0.21728188, y: 0.08876808}
-      - {x: -0.23065835, y: -0.09413974}
-      - {x: -0.20286006, y: -0.1283184}
-      - {x: -0.15124172, y: -0.13086316}
-      - {x: -0.16047531, y: -0.06697017}
-      - {x: -0.10868883, y: -0.13072415}
-      - {x: 0.0013150573, y: -0.05585803}
-      - {x: 0.04089552, y: -0.11360784}
-      - {x: 0.1587989, y: -0.13143128}
-      - {x: 0.13961005, y: -0.024185792}
---- !u!50 &50669140707681658
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830060150329366}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.26}
+  m_EdgeRadius: 0

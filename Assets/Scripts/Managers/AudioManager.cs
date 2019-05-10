@@ -13,13 +13,13 @@ public class AudioManager : Singleton<AudioManager>
 
         gameObject.SetActive(PlayerPrefs.GetInt("EnableSound") == 1);
 
-        foreach (Sound s in _sounds)
+        foreach (Sound sound in _sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
+            sound.source = gameObject.AddComponent<AudioSource>();
 
-            s.source.clip = s.clip;
-            s.source.loop = s.loop;
-			s.source.outputAudioMixerGroup = s.mixerGroup;
+            sound.source.clip = sound.clip;
+            sound.source.loop = sound.loop;
+			sound.source.outputAudioMixerGroup = sound.mixerGroup;
         }      
     }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-
     [SerializeField]
     private float _timeToSpawn;
 
@@ -32,9 +31,8 @@ public class Spawner : MonoBehaviour
 
         Transform spawnPoint = _spawnPoints[randomPosition];
         GameObject animal = _animals[randomAnimal];
+        GameObject poolAnimal = ObjectPool.Find(animal);
         GameObject go = null;
-
-        var poolAnimal = ObjectPool.Find(animal);
 
         if (poolAnimal && !poolAnimal.activeSelf)
         {

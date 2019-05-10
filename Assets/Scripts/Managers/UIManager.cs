@@ -2,14 +2,12 @@
 
 public class UIManager : Singleton<UIManager>
 {
-
     [SerializeField]
     private GameObject _menuPanel, _levelPanel, _statsPanel, _settingsPanel, _hud;
 
     protected override void Awake()
     {
         base.Awake();
-
     }
 
     public enum UIState
@@ -20,10 +18,7 @@ public class UIManager : Singleton<UIManager>
 
     public UIState CurrentState
     {
-        get
-        {
-            return _menuPanel.activeSelf ? UIState.MENU : UIState.LEVEL;
-        }
+        get => _menuPanel.activeSelf ? UIState.MENU : UIState.LEVEL;
     }
 
     private void Start()
@@ -43,7 +38,9 @@ public class UIManager : Singleton<UIManager>
 
     }
 
-    //Gets called when the user selects a level.
+    /// <summary>
+    /// Gets called when the user selects a level.
+    /// </summary>
     public void ActivateLevelPanel()
     {
         _levelPanel.SetActive(true);

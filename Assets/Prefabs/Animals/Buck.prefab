@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 114078188227841118}
   - component: {fileID: 6230892096935158306}
   - component: {fileID: 212495568993755820}
-  - component: {fileID: 50963089579023498}
-  - component: {fileID: 60427681296900734}
+  - component: {fileID: 4457352166712006575}
   m_Layer: 2
   m_Name: Buck
   m_TagString: Animal
@@ -116,29 +115,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &50963089579023498
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023774606970410}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!60 &60427681296900734
-PolygonCollider2D:
+--- !u!61 &4457352166712006575
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,32 +138,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.11073761, y: -0.10067497}
-      - {x: 0.18831801, y: 0.043388426}
-      - {x: 0.26168197, y: 0.07587619}
-      - {x: 0.262788, y: 0.1021416}
-      - {x: 0.10647367, y: 0.14873168}
-      - {x: 0.13905719, y: 0.08121018}
-      - {x: 0.09043807, y: 0.058501866}
-      - {x: -0.17901033, y: 0.09624389}
-      - {x: -0.22495402, y: 0.06744178}
-      - {x: -0.22628984, y: 0.0051379018}
-      - {x: -0.26093858, y: -0.034546584}
-      - {x: -0.2218658, y: -0.09509192}
-      - {x: -0.2106679, y: -0.1530178}
-      - {x: -0.17077596, y: -0.15462899}
-      - {x: -0.16140625, y: -0.0932936}
-      - {x: -0.10580212, y: -0.12286712}
-      - {x: -0.0957383, y: -0.17619795}
-      - {x: -0.07689027, y: -0.16974576}
-      - {x: -0.08014336, y: -0.12497774}
-      - {x: -0.16377388, y: -0.05480432}
-      - {x: -0.010898553, y: -0.056975156}
-      - {x: 0.046427727, y: -0.23389398}
-      - {x: 0.07908601, y: -0.22660293}
-      - {x: 0.032965053, y: -0.09050635}
-      - {x: 0.06845594, y: -0.09310972}
-      - {x: 0.178318, y: -0.20956191}
-      - {x: 0.20946996, y: -0.19186585}
+  serializedVersion: 2
+  m_Size: {x: 0.53, y: 0.47}
+  m_EdgeRadius: 0

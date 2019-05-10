@@ -3,7 +3,7 @@
 public class Cam : MonoBehaviour
 {
     /// <summary>
-    /// Cached gloabl reference to the main camera.
+    /// Cached gloabl reference to the main camera
     /// </summary>
     public static Camera Main { get; private set; }
 

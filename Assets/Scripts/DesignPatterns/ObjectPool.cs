@@ -7,8 +7,7 @@ public static class ObjectPool
 
     public static GameObject Find(GameObject go)
     {
-        GameObject result = null;
-        Pool.TryGetValue(go.name, out result);
+        Pool.TryGetValue(go.name, out var result);
         return result;
     }
 

@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 114151944149428074}
   - component: {fileID: 6875860562223487852}
   - component: {fileID: 212745618330460256}
-  - component: {fileID: 60282618657757390}
-  - component: {fileID: 50808321218043154}
+  - component: {fileID: 3119587172758853720}
   m_Layer: 2
   m_Name: Goose
   m_TagString: Animal
@@ -123,8 +122,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &60282618657757390
-PolygonCollider2D:
+--- !u!61 &3119587172758853720
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,34 +145,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.15288717, y: -0.020943582}
-      - {x: -0.17874628, y: -0.053559564}
-      - {x: -0.14129156, y: -0.0804159}
-      - {x: 0.0438841, y: -0.19030973}
-      - {x: 0.06492853, y: -0.08470869}
-      - {x: 0.17301863, y: -0.027601123}
-      - {x: 0.050486982, y: 0.04539013}
-      - {x: 0.032615602, y: 0.1937463}
---- !u!50 &50808321218043154
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952134443496928}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
+  serializedVersion: 2
+  m_Size: {x: 0.33, y: 0.36}
+  m_EdgeRadius: 0

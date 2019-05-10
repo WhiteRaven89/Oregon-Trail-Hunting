@@ -874,6 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa908b28ab8133e4688ccff037765075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeToSpawn: 0
   _spawnRate: 3
   _dynamicScaling: 0
   _animals:
@@ -1802,8 +1803,8 @@ PrefabInstance:
     - {fileID: 114244290273231766, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 212651903692147466, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 95035804706486204, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 60454877356677122, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 50002879003689896, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
 --- !u!1 &698116986
 GameObject:
@@ -2625,8 +2626,8 @@ PrefabInstance:
     - {fileID: 114244290273231766, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 212651903692147466, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 95035804706486204, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 60454877356677122, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 50002879003689896, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
 --- !u!1 &873003315
 GameObject:
@@ -2659,6 +2660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa908b28ab8133e4688ccff037765075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeToSpawn: 0
   _spawnRate: 4
   _dynamicScaling: 1
   _animals:
@@ -5364,9 +5366,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357946958}
-  - component: {fileID: 1357946960}
-  - component: {fileID: 1357946959}
   - component: {fileID: 1357946961}
+  - component: {fileID: 1357946959}
+  - component: {fileID: 1357946960}
   m_Layer: 5
   m_Name: Rifle
   m_TagString: Untagged
@@ -5442,7 +5444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 1956293840436252, guid: eabd625e3dbf9214dbc2f0d3176c2057, type: 3}
   _firePoint: {fileID: 2095799079}
-  _fireRate: 1
+  _fireRate: 5
 --- !u!1 &1430285895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5491,6 +5493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa908b28ab8133e4688ccff037765075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeToSpawn: 0
   _spawnRate: 9
   _dynamicScaling: 0
   _animals:
@@ -6587,8 +6590,8 @@ PrefabInstance:
     - {fileID: 114244290273231766, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 212651903692147466, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 95035804706486204, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 60454877356677122, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 50002879003689896, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
 --- !u!1 &1902229664
 GameObject:
@@ -6816,8 +6819,8 @@ PrefabInstance:
     - {fileID: 114244290273231766, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 212651903692147466, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 95035804706486204, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 60454877356677122, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 50002879003689896, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
 --- !u!1 &1978493007
 GameObject:
@@ -7241,8 +7244,8 @@ PrefabInstance:
     - {fileID: 114244290273231766, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 212651903692147466, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 95035804706486204, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 60454877356677122, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 50002879003689896, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
 --- !u!1001 &2086596202
 PrefabInstance:
@@ -7315,8 +7318,8 @@ PrefabInstance:
     - {fileID: 114244290273231766, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 212651903692147466, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
     - {fileID: 95035804706486204, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 60454877356677122, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
-    - {fileID: 50002879003689896, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa4e49577733784c926f8df50bc4a7b, type: 3}
 --- !u!1 &2095799078
 GameObject:

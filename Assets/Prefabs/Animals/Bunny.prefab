@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 114128250924334500}
   - component: {fileID: 7043160389334155019}
   - component: {fileID: 212140688307120762}
-  - component: {fileID: 60347452833720692}
-  - component: {fileID: 50933897535519002}
+  - component: {fileID: -4641037627018694769}
   m_Layer: 2
   m_Name: Bunny
   m_TagString: Animal
@@ -116,8 +115,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &60347452833720692
-PolygonCollider2D:
+--- !u!61 &-4641037627018694769
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -139,33 +138,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.0014968086, y: 0.057038233}
-      - {x: -0.15831208, y: 0.026847161}
-      - {x: -0.08022291, y: -0.1083758}
-      - {x: 0.1002868, y: -0.11665605}
-      - {x: 0.09523283, y: -0.03146822}
-      - {x: 0.16162424, y: 0.023598768}
-      - {x: 0.07691088, y: 0.114999995}
---- !u!50 &50933897535519002
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752644943799320}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31, y: 0.23}
+  m_EdgeRadius: 0

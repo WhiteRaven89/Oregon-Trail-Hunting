@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 114244290273231766}
   - component: {fileID: 8383520937627364443}
   - component: {fileID: 212651903692147466}
-  - component: {fileID: 60454877356677122}
-  - component: {fileID: 50002879003689896}
+  - component: {fileID: -7429308166907234840}
   m_Layer: 2
   m_Name: Buffalo
   m_TagString: Animal
@@ -117,8 +116,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &60454877356677122
-PolygonCollider2D:
+--- !u!61 &-7429308166907234840
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,41 +139,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.08859868, y: -0.18168789}
-      - {x: 0.15171973, y: -0.04372613}
-      - {x: 0.20847133, y: -0.108566895}
-      - {x: 0.29165602, y: -0.043598734}
-      - {x: 0.27509555, y: 0.09678346}
-      - {x: 0.17878984, y: 0.1350637}
-      - {x: 0.05579622, y: 0.18831214}
-      - {x: -0.17173608, y: 0.124323025}
-      - {x: -0.29, y: 0.05200643}
-      - {x: -0.2270064, y: -0.17671974}
-      - {x: -0.0832484, y: -0.18334398}
-      - {x: -0.16516376, y: -0.077482685}
-      - {x: -0.03588934, y: -0.061895356}
-      - {x: 0.05592348, y: -0.09213378}
-      - {x: 0.021528665, y: -0.15684715}
---- !u!50 &50002879003689896
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521945928568956}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
+  serializedVersion: 2
+  m_Size: {x: 0.58, y: 0.37}
+  m_EdgeRadius: 0
