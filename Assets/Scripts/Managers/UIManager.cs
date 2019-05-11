@@ -5,20 +5,17 @@ public class UIManager : Singleton<UIManager>
     [SerializeField]
     private GameObject _menuPanel, _levelPanel, _statsPanel, _settingsPanel, _hud;
 
-    protected override void Awake()
-    {
-        base.Awake();
-    }
-
     public enum UIState
     {
         MENU,
         LEVEL,
     }
 
-    public UIState CurrentState
+    public UIState CurrentState => _menuPanel.activeSelf ? UIState.MENU : UIState.LEVEL;   
+
+    protected override void Awake()
     {
-        get => _menuPanel.activeSelf ? UIState.MENU : UIState.LEVEL;
+        base.Awake();
     }
 
     private void Start()
@@ -35,11 +32,10 @@ public class UIManager : Singleton<UIManager>
             _settingsPanel.SetActive(false);
             _hud.SetActive(false);
         }
-
     }
 
     /// <summary>
-    /// Gets called when the user selects a level.
+    /// Activates the level panel when a level is selected from the main menu
     /// </summary>
     public void ActivateLevelPanel()
     {

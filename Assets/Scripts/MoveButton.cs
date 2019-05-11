@@ -20,7 +20,7 @@ public class MoveButton : MonoBehaviour
 
     private void Move()
     {
-       if (GameManager.GameIsPaused)
+       if (GameManager.IsGamePaused)
             return;
 
         GetCurrentScene(_index).SetActive(false);

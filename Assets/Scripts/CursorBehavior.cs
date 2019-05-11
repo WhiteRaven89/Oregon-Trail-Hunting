@@ -6,10 +6,16 @@ public class CursorBehavior : MonoBehaviour
     [SerializeField]
     private Texture2D _cursor;
 
+    private Vector2 _cursorHotSpot;
+
+    private void Start()
+    {
+        _cursorHotSpot = new Vector2(_cursor.width / 2, _cursor.height / 2);
+    }
+
     private void OnMouseEnter()
     {
-        var cursorHotspot = new Vector2(_cursor.width / 2, _cursor.height / 2);
-        Cursor.SetCursor(_cursor, cursorHotspot, CursorMode.ForceSoftware);
+        Cursor.SetCursor(_cursor, _cursorHotSpot, CursorMode.ForceSoftware);
     }
 
     private void OnMouseExit()

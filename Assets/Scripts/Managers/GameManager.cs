@@ -8,12 +8,12 @@ public class GameManager : Singleton<GameManager>
 
     public GameObject CurrentLevel { get; set; }
 
-    public static bool GameIsPaused { get => Time.deltaTime == 0f; }
+    public static bool IsGamePaused => Time.deltaTime == 0f;
 
     public int ShotsFired { get; set; }
     public int AnimalsKilled { get; set; }
 
-    public float Accuracy { get => ShotsFired > 0 ? AnimalsKilled / (float)ShotsFired * 100 : 0; }
+    public float Accuracy => ShotsFired > 0 ? AnimalsKilled / (float)ShotsFired * 100 : 0;
 
     protected override void Awake()
     {
@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
-    /// Gets called when the user selects a level
+    /// Registered as an OnClick event whenever the user selects a level with the mouse button
     /// </summary>
     /// <param name="levelChosen"></param>
     public void ChooseLevel(GameObject levelChosen)
@@ -74,4 +74,5 @@ public class GameManager : Singleton<GameManager>
     {
         ObjectPool.Pool.Clear();
     }
+
 }

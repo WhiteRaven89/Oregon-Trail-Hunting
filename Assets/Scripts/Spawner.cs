@@ -54,10 +54,15 @@ public class Spawner : MonoBehaviour
         StartCoroutine(Disable(go, 60f));
     }
 
+    /// <summary>
+    /// Animals will scale based on where they spawn
+    /// </summary>
+    /// <param name="randomPosition"></param>
+    /// <param name="animal"></param>
     private void Scale(int randomPosition, GameObject animal)
     {
-        int position = (randomPosition % (_spawnPoints.Length / 2)) + 1;
-        float scale = position * .5f;
+        var position = (randomPosition % (_spawnPoints.Length / 2)) + 1;
+        var scale = position * .5f;
         animal.transform.localScale = Vector2.one * scale;
     }
 

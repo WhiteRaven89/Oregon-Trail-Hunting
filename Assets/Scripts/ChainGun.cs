@@ -33,7 +33,7 @@ public class ChainGun : Weapon
 
     private void OnMouseOver()
     {
-        if (GameManager.GameIsPaused)
+        if (GameManager.IsGamePaused)
             return;
 
         Cursor.visible = false;
