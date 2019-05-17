@@ -11,16 +11,11 @@ public class UIManager : Singleton<UIManager>
         LEVEL,
     }
 
-    public UIState CurrentState => _menuPanel.activeSelf ? UIState.MENU : UIState.LEVEL;   
-
-    protected override void Awake()
-    {
-        base.Awake();
-    }
+    public UIState GetCurrentState => _menuPanel.activeSelf ? UIState.MENU : UIState.LEVEL;   
 
     private void Start()
     {
-        if (CurrentState == UIState.MENU)
+        if (GetCurrentState == UIState.MENU)
         {
             foreach (Transform child in _menuPanel.transform)
             {

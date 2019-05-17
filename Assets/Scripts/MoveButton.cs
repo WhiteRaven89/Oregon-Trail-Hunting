@@ -5,12 +5,17 @@ public class MoveButton : MonoBehaviour
 {
     private int _index, _sceneCount;
 
+    private Transform _currentLevel;
+
+    private GameObject GetCurrentScene(int currentScene) => _currentLevel.GetChild(0).GetChild(currentScene).gameObject;
+
     public static event Action<int> OnMove;
 
     private void Start()
     {
         _index = 0;
-        _sceneCount = GameManager.Instance.CurrentLevel.transform.Find("Scenes").childCount;
+        _currentLevel = GameManager.Instance.CurrentLevel.transform;
+        _sceneCount = _currentLevel.Find("Scenes").childCount;
     }
 
     private void OnMouseDown()
@@ -30,8 +35,4 @@ public class MoveButton : MonoBehaviour
         OnMove?.Invoke(_index);
     }
 
-    private GameObject GetCurrentScene(int currentScene)
-    {
-        return GameManager.Instance.CurrentLevel.transform.GetChild(0).GetChild(currentScene).gameObject;
-    }
 }

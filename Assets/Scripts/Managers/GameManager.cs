@@ -24,7 +24,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        if (UIManager.Instance.CurrentState == UIManager.UIState.MENU)
+        if (UIManager.Instance.GetCurrentState == UIManager.UIState.MENU)
         {
             DeactivateRecursively(_world);
         }

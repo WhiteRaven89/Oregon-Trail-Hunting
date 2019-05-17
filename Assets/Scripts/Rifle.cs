@@ -2,14 +2,10 @@
 
 public class Rifle : Weapon
 {
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-    }
 
     private void OnMouseDown()
     {
-        Vector2 target = Cam.Main.ScreenToWorldPoint(Input.mousePosition);
+        var target = Cam.GetMouseWorldPosition;
         Fire(target);
     }
 

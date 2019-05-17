@@ -53,7 +53,7 @@ public class ChainGun : Weapon
 
     private void FollowMouse()
     {
-        Vector2 mousePos = Cam.Main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePos = Cam.GetMouseWorldPosition;
         transform.localPosition = Vector2.right * mousePos.x;
     }
 
