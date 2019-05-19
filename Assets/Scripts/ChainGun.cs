@@ -69,7 +69,7 @@ public class ChainGun : Weapon
             _barrelAnimator.speed = 1;
             Ammo--;
 
-            AudioManager.Instance.Play("chainGun");
+            AudioManager.Instance.Play(Sound.CHAINGUN);
         }
     }
 

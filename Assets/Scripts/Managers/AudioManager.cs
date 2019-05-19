@@ -58,4 +58,9 @@ public class Sound
     [Range(.1f, 3f)]
     public float pitch = 1f;
 
+    #region Sounds
+    public const string ANIMAL_HIT = "animalHit";
+    public const string CHAINGUN = "chainGun";
+    public const string GUN_SHOT = "gunShot";
+    #endregion
 }

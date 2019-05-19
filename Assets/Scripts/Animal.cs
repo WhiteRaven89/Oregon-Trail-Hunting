@@ -18,7 +18,7 @@ public class Animal : MonoBehaviour
         var go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
         go.transform.localScale = transform.localScale;
 
-        AudioManager.Instance.Play("animalHit");
+        AudioManager.Instance.Play(Sound.ANIMAL_HIT);
 
         gameObject.SetActive(false);
     }
