@@ -29,17 +29,18 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    /// <summary>
-    /// Activates the level panel when a level is selected from the main menu
-    /// </summary>
     public void ActivateLevelPanel()
     {
+        _menuPanel.SetActive(false);
         _levelPanel.SetActive(true);
 
         foreach (Transform child in _levelPanel.transform)
         {
             child.gameObject.SetActive(true);
         }
+
+        if (GameManager.Instance.CurrentLevel.CompareTag("DoomLevel"))
+            _hud.SetActive(true);
     }
 
     public void EndHunting()

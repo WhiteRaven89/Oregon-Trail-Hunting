@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class CursorBehavior : MonoBehaviour
+public class GameCursorBehavior : MonoBehaviour
 {
     [SerializeField]
     private Texture2D _cursor;

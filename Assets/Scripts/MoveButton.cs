@@ -18,12 +18,7 @@ public class MoveButton : MonoBehaviour
         _sceneCount = _currentLevel.Find("Scenes").childCount;
     }
 
-    private void OnMouseDown()
-    {
-        Move();
-    }
-
-    private void Move()
+    public void Move()
     {
        if (GameManager.IsGamePaused)
             return;

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
-    private GameObject _world;
+    private GameObject _world, _regularGroundSpawner, _doomGroundSpawner, _airSpawner, _rifle, _chainGun, _regularLevels, _doomLevel;
 
     public GameObject CurrentLevel { get; set; }
 
@@ -45,19 +45,29 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    /// <summary>
-    /// Registered as an OnClick event whenever the user selects a level with the mouse button
-    /// </summary>
-    /// <param name="levelChosen"></param>
-    public void ChooseLevel(GameObject levelChosen)
+    public void SelectLevel(GameObject level)
     {
-        levelChosen.SetActive(true);
-        levelChosen.transform.GetChild(0).gameObject.SetActive(true);
-        levelChosen.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+        level.SetActive(true);
+        level.transform.GetChild(0).gameObject.SetActive(true);
+        level.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
 
-        CurrentLevel = levelChosen;
+        CurrentLevel = level;
 
-        _world.SetActive(true);
+        _world.SetActive(true);       
+
+        if (level.CompareTag("DoomLevel"))
+        {
+            _doomLevel.SetActive(true);
+            _doomGroundSpawner.SetActive(true);
+            _chainGun.SetActive(true);
+        }
+        else
+        {
+            _regularLevels.SetActive(true);
+            _regularGroundSpawner.SetActive(true);
+            _airSpawner.SetActive(true);
+            _rifle.SetActive(true);
+        }
     }
 
     public void Pause()

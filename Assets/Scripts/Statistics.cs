@@ -12,15 +12,6 @@ public class Statistics : MonoBehaviour
         DisplayText();
     }
 
-    private void OnEnable()
-    {
-        //Activate all children.
-        foreach (Transform child in gameObject.transform)
-        {
-            child.gameObject.SetActive(true);
-        }
-    }
-
     private void DisplayText()
     {
         var gm = GameManager.Instance;

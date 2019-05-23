@@ -680,10 +680,9 @@ GameObject:
   m_Component:
   - component: {fileID: 500141916}
   - component: {fileID: 500141921}
-  - component: {fileID: 500141920}
+  - component: {fileID: 500141917}
   - component: {fileID: 500141919}
   - component: {fileID: 500141918}
-  - component: {fileID: 500141917}
   m_Layer: 5
   m_Name: EndButton
   m_TagString: Untagged
@@ -710,22 +709,19 @@ RectTransform:
   m_AnchoredPosition: {x: 140.18, y: -167.01}
   m_SizeDelta: {x: 100, y: 23.492}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!70 &500141917
-CapsuleCollider2D:
+--- !u!114 &500141917
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500141915}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.31852728, y: 0.007422976}
-  m_Size: {x: 100.99312, y: 23.97687}
-  m_Direction: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
 --- !u!114 &500141918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,19 +818,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &500141920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500141915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
 --- !u!222 &500141921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +838,7 @@ GameObject:
   - component: {fileID: 514288595}
   - component: {fileID: 514288594}
   m_Layer: 0
-  m_Name: Ground Spawner
+  m_Name: Doom Ground Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,10 +1151,9 @@ GameObject:
   m_Component:
   - component: {fileID: 545319903}
   - component: {fileID: 545319908}
+  - component: {fileID: 545319904}
   - component: {fileID: 545319907}
   - component: {fileID: 545319906}
-  - component: {fileID: 545319905}
-  - component: {fileID: 545319904}
   m_Layer: 5
   m_Name: OKButton
   m_TagString: Untagged
@@ -1198,23 +1180,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.96, y: -61}
   m_SizeDelta: {x: 51.78, y: 24.06}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!70 &545319904
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545319902}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.034898523, y: -0.0013843223}
-  m_Size: {x: 51.997334, y: 23.997164}
-  m_Direction: 1
---- !u!114 &545319905
+--- !u!114 &545319904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1223,7 +1189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 545319902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
@@ -1429,17 +1395,16 @@ GameObject:
   m_Component:
   - component: {fileID: 571264721}
   - component: {fileID: 571264724}
+  - component: {fileID: 571264725}
   - component: {fileID: 571264723}
   - component: {fileID: 571264722}
-  - component: {fileID: 571264725}
-  - component: {fileID: 571264726}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &571264721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1456,8 +1421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197, y: 75}
-  m_SizeDelta: {x: 177, y: 145}
+  m_AnchoredPosition: {x: -197, y: 79.91}
+  m_SizeDelta: {x: 177, y: 145.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571264722
 MonoBehaviour:
@@ -1502,19 +1467,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342973194}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1909591325}
-        m_MethodName: ChooseLevel
+        m_MethodName: SelectLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 406470601}
@@ -1524,53 +1478,9 @@ MonoBehaviour:
           m_StringArgument: LevelOne
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1289975422}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1055545433}
         m_MethodName: ActivateLevelPanel
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 873003315}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430285895}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1357946957}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1627,36 +1537,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 571264720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!61 &571264726
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571264720}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 177, y: 145}
-  m_EdgeRadius: 0
 --- !u!1 &593619004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,10 +1855,9 @@ GameObject:
   m_Component:
   - component: {fileID: 720015497}
   - component: {fileID: 720015500}
+  - component: {fileID: 720015501}
   - component: {fileID: 720015499}
   - component: {fileID: 720015498}
-  - component: {fileID: 720015501}
-  - component: {fileID: 720015502}
   m_Layer: 5
   m_Name: Button2
   m_TagString: Untagged
@@ -1998,7 +1881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 75}
+  m_AnchoredPosition: {x: 0, y: 79.52}
   m_SizeDelta: {x: 177, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &720015498
@@ -2044,19 +1927,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342973194}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1909591325}
-        m_MethodName: ChooseLevel
+        m_MethodName: SelectLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2107454575}
@@ -2066,53 +1938,9 @@ MonoBehaviour:
           m_StringArgument: LevelOne
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1289975422}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1055545433}
         m_MethodName: ActivateLevelPanel
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 873003315}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430285895}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1357946957}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2169,36 +1997,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 720015496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!61 &720015502
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720015496}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 177, y: 145}
-  m_EdgeRadius: 0
 --- !u!1 &736466340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,7 +2443,7 @@ GameObject:
   - component: {fileID: 873003317}
   - component: {fileID: 873003316}
   m_Layer: 0
-  m_Name: Ground Spawner
+  m_Name: Regular Ground Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2782,10 +2584,9 @@ GameObject:
   m_Component:
   - component: {fileID: 902280497}
   - component: {fileID: 902280500}
+  - component: {fileID: 902280501}
   - component: {fileID: 902280499}
   - component: {fileID: 902280498}
-  - component: {fileID: 902280501}
-  - component: {fileID: 902280502}
   m_Layer: 5
   m_Name: Button5
   m_TagString: Untagged
@@ -2809,8 +2610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -85}
-  m_SizeDelta: {x: 177, y: 145}
+  m_AnchoredPosition: {x: 0, y: -80.86}
+  m_SizeDelta: {x: 177, y: 144.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902280498
 MonoBehaviour:
@@ -2855,19 +2656,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342973194}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1909591325}
-        m_MethodName: ChooseLevel
+        m_MethodName: SelectLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 76722905}
@@ -2877,53 +2667,9 @@ MonoBehaviour:
           m_StringArgument: LevelOne
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1289975422}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1055545433}
         m_MethodName: ActivateLevelPanel
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 873003315}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430285895}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1357946957}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2980,36 +2726,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 902280496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!61 &902280502
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902280496}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 177, y: 145}
-  m_EdgeRadius: 0
 --- !u!1 &977819660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,10 +3305,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1092934839}
   - component: {fileID: 1092934842}
+  - component: {fileID: 1092934843}
   - component: {fileID: 1092934841}
   - component: {fileID: 1092934840}
-  - component: {fileID: 1092934843}
-  - component: {fileID: 1092934844}
   m_Layer: 5
   m_Name: Button6
   m_TagString: Untagged
@@ -3612,8 +3331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: -85}
-  m_SizeDelta: {x: 177, y: 145}
+  m_AnchoredPosition: {x: 196, y: -80.86}
+  m_SizeDelta: {x: 177, y: 144.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1092934840
 MonoBehaviour:
@@ -3658,19 +3377,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342973194}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1909591325}
-        m_MethodName: ChooseLevel
+        m_MethodName: SelectLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1728301667}
@@ -3680,53 +3388,9 @@ MonoBehaviour:
           m_StringArgument: LevelOne
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 376990441}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1055545433}
         m_MethodName: ActivateLevelPanel
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1262331168}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 514288593}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1276233145}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3783,36 +3447,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1092934838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!61 &1092934844
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092934838}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 177, y: 145}
-  m_EdgeRadius: 0
 --- !u!1 &1158610333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,10 +3494,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1192191990}
   - component: {fileID: 1192191993}
+  - component: {fileID: 1192191994}
   - component: {fileID: 1192191992}
   - component: {fileID: 1192191991}
-  - component: {fileID: 1192191994}
-  - component: {fileID: 1192191995}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -3883,8 +3520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.496, y: -187.99242}
-  m_SizeDelta: {x: 100.9979, y: 24.0148}
+  m_AnchoredPosition: {x: 0.18, y: -185.8}
+  m_SizeDelta: {x: 100.37, y: 19.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192191991
 MonoBehaviour:
@@ -3940,28 +3577,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 720015496}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 902280496}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1192191992
@@ -4010,26 +3625,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192191989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!70 &1192191995
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192191989}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018787388, y: -0.013187528}
-  m_Size: {x: 100.87293, y: 23.991653}
-  m_Direction: 1
 --- !u!1 &1202724164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,7 +4250,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0.042379707}
   m_textInfo:
-    textComponent: {fileID: 0}
+    textComponent: {fileID: 1277103141}
     characterCount: 1
     spriteCount: 0
     spaceCount: 0
@@ -4731,10 +4330,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1305224428}
   - component: {fileID: 1305224431}
+  - component: {fileID: 1305224432}
   - component: {fileID: 1305224430}
   - component: {fileID: 1305224429}
-  - component: {fileID: 1305224432}
-  - component: {fileID: 1305224433}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -4758,7 +4356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195, y: 75}
+  m_AnchoredPosition: {x: 195, y: 79.52}
   m_SizeDelta: {x: 177, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305224429
@@ -4804,19 +4402,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342973194}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1909591325}
-        m_MethodName: ChooseLevel
+        m_MethodName: SelectLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1045920655}
@@ -4826,53 +4413,9 @@ MonoBehaviour:
           m_StringArgument: LevelOne
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1289975422}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1055545433}
         m_MethodName: ActivateLevelPanel
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 873003315}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430285895}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1357946957}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4929,36 +4472,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1305224427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!61 &1305224433
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305224427}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 177, y: 145}
-  m_EdgeRadius: 0
 --- !u!1 &1325804649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,10 +4486,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1325804650}
   - component: {fileID: 1325804653}
+  - component: {fileID: 1325804654}
   - component: {fileID: 1325804652}
   - component: {fileID: 1325804651}
-  - component: {fileID: 1325804654}
-  - component: {fileID: 1325804655}
   m_Layer: 5
   m_Name: Button4
   m_TagString: Untagged
@@ -4996,8 +4512,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197, y: -85}
-  m_SizeDelta: {x: 177, y: 145}
+  m_AnchoredPosition: {x: -197, y: -80.86}
+  m_SizeDelta: {x: 177, y: 144.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1325804651
 MonoBehaviour:
@@ -5042,19 +4558,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342973194}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1909591325}
-        m_MethodName: ChooseLevel
+        m_MethodName: SelectLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1601618183}
@@ -5064,53 +4569,9 @@ MonoBehaviour:
           m_StringArgument: LevelOne
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1289975422}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1055545433}
         m_MethodName: ActivateLevelPanel
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 873003315}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430285895}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1357946957}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5167,36 +4628,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1325804649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
---- !u!61 &1325804655
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325804649}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 177, y: 145}
-  m_EdgeRadius: 0
 --- !u!1 &1342973194
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,10 +4947,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1440871036}
   - component: {fileID: 1440871039}
-  - component: {fileID: 1440871041}
+  - component: {fileID: 1440871040}
   - component: {fileID: 1440871038}
   - component: {fileID: 1440871037}
-  - component: {fileID: 1440871040}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -5657,23 +5091,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440871035}
   m_CullTransparentMesh: 0
---- !u!70 &1440871040
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440871035}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.12343526, y: -0.07813873}
-  m_Size: {x: 57.98704, y: 24.005817}
-  m_Direction: 1
---- !u!114 &1440871041
+--- !u!114 &1440871040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5682,7 +5100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440871035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
@@ -5850,7 +5268,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0.10241756}
   m_textInfo:
-    textComponent: {fileID: 0}
+    textComponent: {fileID: 1509340679}
     characterCount: 1
     spriteCount: 0
     spaceCount: 0
@@ -6081,11 +5499,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1685267485}
   - component: {fileID: 1685267490}
+  - component: {fileID: 1685267492}
   - component: {fileID: 1685267491}
-  - component: {fileID: 1685267489}
   - component: {fileID: 1685267488}
   - component: {fileID: 1685267487}
-  - component: {fileID: 1685267486}
   m_Layer: 5
   m_Name: MoveButton
   m_TagString: Untagged
@@ -6112,22 +5529,6 @@ RectTransform:
   m_AnchoredPosition: {x: -160.48, y: -167.01}
   m_SizeDelta: {x: 100, y: 23.49}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!70 &1685267486
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685267484}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.030767918, y: 0.022172933}
-  m_Size: {x: 100.958, y: 23.965277}
-  m_Direction: 1
 --- !u!114 &1685267487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6170,7 +5571,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1685267488}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1685267491}
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1685267488
@@ -6202,19 +5614,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1685267489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685267484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
 --- !u!222 &1685267490
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6235,6 +5634,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e491a75f23afdd45b077d3277e51e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1685267492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685267484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f1c835428a04244a287bea66968d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cursor: {fileID: 2800000, guid: 85a4166aecf6f904f8a598e6dcb35027, type: 3}
 --- !u!1 &1704496483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6375,7 +5787,7 @@ GameObject:
   - component: {fileID: 1728301669}
   m_Layer: 0
   m_Name: LevelSix
-  m_TagString: Untagged
+  m_TagString: DoomLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6702,6 +6114,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _world: {fileID: 1056823849}
+  _regularGroundSpawner: {fileID: 873003315}
+  _doomGroundSpawner: {fileID: 514288593}
+  _airSpawner: {fileID: 1430285895}
+  _rifle: {fileID: 1357946957}
+  _chainGun: {fileID: 1276233145}
+  _regularLevels: {fileID: 1289975422}
+  _doomLevel: {fileID: 376990441}
 --- !u!4 &1909591326
 Transform:
   m_ObjectHideFlags: 0
@@ -6710,7 +6129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909591324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06382768, y: 0.43347713, z: 89.98043}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7071,7 +6490,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
-    textComponent: {fileID: 0}
+    textComponent: {fileID: 1990149281}
     characterCount: 4
     spriteCount: 0
     spaceCount: 0
