@@ -4119,11 +4119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba91dcc563f80cd4bb1279a21940d0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 1956293840436252, guid: eabd625e3dbf9214dbc2f0d3176c2057, type: 3}
-  _firePoint: {fileID: 1704496484}
   _fireRate: 15
   _barrel: {fileID: 771772127}
   _muzzleFlash: {fileID: 1044172790}
+  _firePoint: {fileID: 1704496484}
 --- !u!1 &1277103139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4877,9 +4876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cddc8dd62596664db357b7009086a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 1956293840436252, guid: eabd625e3dbf9214dbc2f0d3176c2057, type: 3}
-  _firePoint: {fileID: 2095799079}
-  _fireRate: 5
+  _fireRate: 3
 --- !u!1 &1430285895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,7 +5659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1704496484
 Transform:
   m_ObjectHideFlags: 0

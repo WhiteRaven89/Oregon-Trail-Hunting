@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Animal
   - Ground
   - DoomLevel
   layers:
@@ -16,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Animal
   - 
   - 
   - 

@@ -13,11 +13,18 @@ public class Animal : MonoBehaviour
         transform.Translate(Vector2.right * (_speed * Time.deltaTime));
     }
 
+    private void OnMouseDown()
+    {
+        Death();
+       
+    }
+
     public void Death()
     {
         var go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
         go.transform.localScale = transform.localScale;
 
+        GameManager.Instance.AnimalsKilled++;
         AudioManager.Instance.Play(Sound.ANIMAL_HIT);
 
         gameObject.SetActive(false);

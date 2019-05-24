@@ -61,6 +61,6 @@ public class Sound
     #region Sounds
     public const string ANIMAL_HIT = "animalHit";
     public const string CHAINGUN = "chainGun";
-    public const string GUN_SHOT = "gunShot";
+    public const string GUNSHOT = "gunShot";
     #endregion
 }
