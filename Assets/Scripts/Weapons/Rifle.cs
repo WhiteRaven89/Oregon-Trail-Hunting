@@ -12,7 +12,7 @@ public class Rifle : Weapon
     {
         base.Fire();
 
-        //Fire rate only applies to audio. The player can actually shoot at the target as much as they want.
+        // Fire rate only applies to audio. 
         if (Time.time >= _nextTimeToFire)
         {
             _nextTimeToFire = Time.time + 1f / _fireRate;

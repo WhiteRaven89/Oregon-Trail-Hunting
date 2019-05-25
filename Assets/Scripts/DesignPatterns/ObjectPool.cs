@@ -33,10 +33,10 @@ public static class ObjectPool
 
         if (poolObject)
         {
-            //If the object is originally from the pool, deactivate it so that it can be pooled again.
+            // If the object is originally from the pool, deactivate it so that it can be pooled again.
             if (gameObject == poolObject)
                 gameObject.SetActive(false);
-            //Otherwise, it's just a clone that can be deleted.
+            // Otherwise, it's just a clone that can be deleted.
             else
                 GameObject.Destroy(gameObject);
         }
@@ -48,7 +48,7 @@ public static class ObjectPool
         return result;
     }
 
-    public static GameObject Reuse(GameObject go, Vector3 position, Quaternion rotation)
+    private static GameObject Reuse(GameObject go, Vector3 position, Quaternion rotation)
     {
         var obj = Find(go);
 
