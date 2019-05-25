@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class ObjectPool
 {
-    public static Dictionary<string, GameObject> Pool = new Dictionary<string, GameObject>();
+    private static Dictionary<string, GameObject> Pool = new Dictionary<string, GameObject>();
 
     public static GameObject GetFromPool(GameObject gameObject, Transform transform, Transform parent)
     {

@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4217245542682854}
   - component: {fileID: 114043746151032774}
-  - component: {fileID: 170117254499413489}
   - component: {fileID: 7082894158547631469}
   - component: {fileID: 212443413274547568}
   - component: {fileID: 4050662386264931317}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Fawn
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,19 +49,6 @@ MonoBehaviour:
   _speed: 4
   _deathPrefab: {fileID: 1003069910938122, guid: d865fef766a33604f8c360530b58b030,
     type: 3}
---- !u!114 &170117254499413489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852228114007286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cursor: {fileID: 2800000, guid: 43acb47d7da800e458167abc4b294773, type: 3}
 --- !u!114 &7082894158547631469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +125,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

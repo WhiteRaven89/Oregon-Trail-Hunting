@@ -10,22 +10,15 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.right * (_speed * Time.deltaTime));
-    }
-
-    private void OnMouseDown()
-    {
-        Death();
-       
+        transform.Translate(Vector2.right * (_speed * Time.fixedDeltaTime));
     }
 
     public void Death()
     {
-        var go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
+        GameObject go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
         go.transform.localScale = transform.localScale;
 
-        GameManager.Instance.AnimalsKilled++;
-        AudioManager.Instance.Play(Sound.ANIMAL_HIT);
+        AudioManager.Instance.Play("animalHit");
 
         gameObject.SetActive(false);
     }

@@ -2,21 +2,25 @@
 
 public class Rifle : Weapon
 {
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+    }
 
     private void OnMouseDown()
     {
-        Fire();
+        Vector2 target = Cam.Main.ScreenToWorldPoint(Input.mousePosition);
+        Fire(target);
     }
 
-    protected override void Fire()
+    protected override void Fire(Vector2 target)
     {
-        base.Fire();
-
-        // Fire rate only applies to audio. 
         if (Time.time >= _nextTimeToFire)
         {
             _nextTimeToFire = Time.time + 1f / _fireRate;
-            AudioManager.Instance.Play(Sound.GUNSHOT);
+
+            base.Fire(target);
+            AudioManager.Instance.Play("gunShot");
         }
     }
 

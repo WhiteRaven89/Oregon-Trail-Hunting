@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4745932915641788}
   - component: {fileID: 114151944149428074}
-  - component: {fileID: -4841064974577535202}
   - component: {fileID: 6875860562223487852}
   - component: {fileID: 212745618330460256}
   - component: {fileID: 3119587172758853720}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: Goose
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,19 +49,6 @@ MonoBehaviour:
   _speed: 2
   _deathPrefab: {fileID: 1788248573338480, guid: 1f9f6a0214495e24cac6ae4de542f561,
     type: 3}
---- !u!114 &-4841064974577535202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952134443496928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b0dcfcf1587c343a9e505f1bedcdd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cursor: {fileID: 2800000, guid: 43acb47d7da800e458167abc4b294773, type: 3}
 --- !u!114 &6875860562223487852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +132,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -5,9 +5,6 @@ public class ChainGun : Weapon
     [SerializeField]
     private GameObject _barrel, _muzzleFlash;
 
-    [SerializeField]
-    private Transform _firePoint;
-
     private Animator _barrelAnimator;
 
     private int _ammo;
@@ -42,7 +39,7 @@ public class ChainGun : Weapon
 
         if (Input.GetMouseButton(0) && Ammo != 0)
         {
-            Fire();
+            Fire(new Vector2(_firePoint.position.x, .75f));
         }
         else
         {
@@ -59,29 +56,20 @@ public class ChainGun : Weapon
         transform.localPosition = Vector2.right * mousePos.x;
     }
 
-    protected override void Fire()
+    protected override void Fire(Vector2 target)
     {
         if (Time.time >= _nextTimeToFire)
         {
             _nextTimeToFire = Time.time + 1f / _fireRate;
 
-            base.Fire();
+            base.Fire(target);
 
-            var hit = Physics2D.Raycast(_firePoint.position, Vector2.up, Mathf.Infinity, 1 << LayerMask.NameToLayer("Animal"));
+            _muzzleFlash.SetActive(true);
+            _barrelAnimator.speed = 1;
+            Ammo--;
 
-            if (hit)
-            {
-                var animal = hit.collider.GetComponent<Animal>();
-                animal.Death();
-            }
-
-            AudioManager.Instance.Play(Sound.CHAINGUN);
+            AudioManager.Instance.Play("chainGun");
         }
-
-        _muzzleFlash.SetActive(true);
-        _barrelAnimator.speed = 1;
-        Ammo--;
-        
     }
 
     private void OnMouseExit()

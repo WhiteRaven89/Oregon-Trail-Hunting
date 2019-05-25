@@ -10,10 +10,16 @@ public class GameManager : Singleton<GameManager>
 
     public static bool IsGamePaused => Time.deltaTime == 0f;
 
+    private float _accuracy;
+
     public int ShotsFired { get; set; }
     public int AnimalsKilled { get; set; }
 
-    public float Accuracy => ShotsFired > 0 ? AnimalsKilled / (float)ShotsFired * 100 : 0;
+    public float Accuracy
+    {
+        get => ShotsFired > 0 ? AnimalsKilled / (float)ShotsFired * 100 : 0;
+        set => _accuracy = Mathf.Clamp(value, 0, 100);
+    }
 
     protected override void Awake()
     {
@@ -78,11 +84,6 @@ public class GameManager : Singleton<GameManager>
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    private void OnLevelWasLoaded()
-    {
-        ObjectPool.Pool.Clear();
     }
 
 }

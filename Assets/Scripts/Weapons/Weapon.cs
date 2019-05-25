@@ -1,7 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField]
+    protected GameObject _bullet;
+
+    [SerializeField]
+    protected Transform _firePoint;
+
+    public static event Func<Vector2, IEnumerator> OnFire;
+
     [SerializeField]
     protected float _fireRate;
 
@@ -11,10 +21,19 @@ public class Weapon : MonoBehaviour
     {
         MoveButton.OnMove += Move;
         Statistics.OnDisplay += Disable;
+
+        _firePoint.localPosition = Vector2.up * -1.25f;
     }
 
-    protected virtual void Fire()
+    protected virtual void Fire(Vector2 target)
     {
+        ObjectPool.GetFromPool(_bullet, _firePoint, GameManager.Instance.CurrentLevel.transform);
+
+        if (OnFire != null)
+        {
+            StartCoroutine(OnFire(target));
+        }
+
         GameManager.Instance.ShotsFired++;
     }
 
