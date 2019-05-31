@@ -402,21 +402,18 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
     volume: 1
-    pitch: 1
   - name: animalHit
     loop: 0
     clip: {fileID: 8300000, guid: 73d5dc27f919d9541a3b72c798c041ad, type: 3}
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
     volume: 0.4
-    pitch: 1
   - name: chainGun
     loop: 0
     clip: {fileID: 8300000, guid: 970a276639b68c64b92dceb806ecb91b, type: 3}
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
     volume: 1
-    pitch: 1
 --- !u!4 &273076292
 Transform:
   m_ObjectHideFlags: 0
@@ -4120,7 +4117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 1956293840436252, guid: eabd625e3dbf9214dbc2f0d3176c2057, type: 3}
-  _firePoint: {fileID: 1704496484}
   _fireRate: 15
   _barrel: {fileID: 771772127}
   _muzzleFlash: {fileID: 1044172790}
@@ -4878,7 +4874,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 1956293840436252, guid: eabd625e3dbf9214dbc2f0d3176c2057, type: 3}
-  _firePoint: {fileID: 2095799079}
   _fireRate: 3
 --- !u!1 &1430285895
 GameObject:

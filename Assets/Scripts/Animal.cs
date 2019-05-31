@@ -10,7 +10,7 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.right * (_speed * Time.fixedDeltaTime));
+        transform.Translate(Vector2.right * (_speed * Time.deltaTime));
     }
 
     public void Death()
@@ -18,7 +18,7 @@ public class Animal : MonoBehaviour
         GameObject go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
         go.transform.localScale = transform.localScale;
 
-        AudioManager.Instance.Play("animalHit");
+        AudioManager.Instance.Play(Sound.ANIMAL_HIT);
 
         gameObject.SetActive(false);
     }

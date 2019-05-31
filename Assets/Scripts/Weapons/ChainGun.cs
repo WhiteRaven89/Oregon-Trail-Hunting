@@ -18,6 +18,7 @@ public class ChainGun : Weapon
     protected override void OnEnable()
     {
         base.OnEnable();
+
         _muzzleFlash.SetActive(false);
         _barrel.SetActive(true);
     }
@@ -68,7 +69,7 @@ public class ChainGun : Weapon
             _barrelAnimator.speed = 1;
             Ammo--;
 
-            AudioManager.Instance.Play("chainGun");
+            AudioManager.Instance.Play(Sound.CHAINGUN);
         }
     }
 

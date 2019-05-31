@@ -7,7 +7,6 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     protected GameObject _bullet;
 
-    [SerializeField]
     protected Transform _firePoint;
 
     public static event Func<Vector2, IEnumerator> OnFire;
@@ -22,6 +21,7 @@ public class Weapon : MonoBehaviour
         MoveButton.OnMove += Move;
         Statistics.OnDisplay += Disable;
 
+        _firePoint = transform.Find("FirePoint");
         _firePoint.localPosition = Vector2.up * -1.25f;
     }
 

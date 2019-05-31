@@ -20,7 +20,7 @@ public class Rifle : Weapon
             _nextTimeToFire = Time.time + 1f / _fireRate;
 
             base.Fire(target);
-            AudioManager.Instance.Play("gunShot");
+            AudioManager.Instance.Play(Sound.GUNSHOT);
         }
     }
 
