@@ -29,7 +29,7 @@ public class AudioManager : Singleton<AudioManager>
 
         if (s == null)
         {
-            Debug.LogError($"Sound: {name} not found.");
+            Debug.LogError($"Sound: {sound} not found.");
             return;
         }
 
