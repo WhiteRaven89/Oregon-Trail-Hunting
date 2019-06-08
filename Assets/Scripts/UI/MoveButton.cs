@@ -7,8 +7,6 @@ public class MoveButton : MonoBehaviour
 
     private Transform _currentLevel;
 
-    private GameObject GetCurrentScene(int currentScene) => _currentLevel.GetChild(0).GetChild(currentScene).gameObject;
-
     public static event Action<int> OnMove;
 
     private void Start()
@@ -17,7 +15,7 @@ public class MoveButton : MonoBehaviour
         _currentLevel = GameManager.Instance.CurrentLevel.transform;
         _sceneCount = _currentLevel.Find("Scenes").childCount;
     }
-
+ 
     public void Move()
     {
        if (GameManager.IsGamePaused)
@@ -26,6 +24,11 @@ public class MoveButton : MonoBehaviour
         GetCurrentScene(_index).SetActive(false);
         _index = ++_index % _sceneCount;
         GetCurrentScene(_index).SetActive(true);
+
+        #region Local function
+        // Returns the current scene
+        GameObject GetCurrentScene(int currentScene) => _currentLevel.GetChild(0).GetChild(currentScene).gameObject;
+        #endregion
 
         OnMove?.Invoke(_index);
     }
