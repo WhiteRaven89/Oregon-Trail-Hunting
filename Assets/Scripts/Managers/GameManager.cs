@@ -40,7 +40,7 @@ public class GameManager : Singleton<GameManager>
     /// Deactivates the world, as well as everything inside of it (children, grandchildren, etc.)
     /// </summary>
     /// <param name="world"></param>
-    private void DeactivateRecursively(GameObject world)
+    private static void DeactivateRecursively(GameObject world)
     {
         world.SetActive(false);
 

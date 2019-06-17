@@ -28,7 +28,7 @@ public class Statistics : MonoBehaviour
         var text = transform.Find(name).GetComponent<TextMeshProUGUI>();
 
         if (useFormat)
-            text.text = stat.ToString("F0") + "%";
+            text.text = $"{stat:F0}%";
         else
             text.text = stat.ToString();
 

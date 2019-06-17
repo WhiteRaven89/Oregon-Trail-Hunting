@@ -12,7 +12,7 @@ public class ChainGun : Weapon
     public int Ammo
     {
         get => _ammo;
-        set => _ammo = Mathf.Clamp(value, 0, 999);
+        private set => _ammo = Mathf.Clamp(value, 0, 999);
     }
 
     protected override void OnEnable()

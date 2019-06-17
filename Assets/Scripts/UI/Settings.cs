@@ -26,7 +26,7 @@ public class Settings : MonoBehaviour
         AudioManager.Instance.gameObject.SetActive(_enableSound);
     }
 
-    private void SetOption(string option, bool enabled)
+    private static void SetOption(string option, bool enabled)
     {
         PlayerPrefs.SetInt(option, Convert.ToInt32(enabled));
     }

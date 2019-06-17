@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
         animal.transform.localScale = Vector2.one * scale;
     }
 
-    private IEnumerator Disable(GameObject animal, float time)
+    private static IEnumerator Disable(GameObject animal, float time)
     {
         yield return new WaitForSeconds(time);
         ObjectPool.RemoveFromPool(animal);

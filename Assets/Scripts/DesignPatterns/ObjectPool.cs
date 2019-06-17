@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class ObjectPool
 {
-    private static Dictionary<string, GameObject> Pool = new Dictionary<string, GameObject>();
+    private static readonly Dictionary<string, GameObject> Pool = new Dictionary<string, GameObject>();
 
     public static GameObject GetFromPool(GameObject gameObject, Transform transform, Transform parent)
     {
@@ -38,17 +38,17 @@ public static class ObjectPool
                 gameObject.SetActive(false);
             // Otherwise, it's just a clone that can be deleted.
             else
-                GameObject.Destroy(gameObject);
+                Object.Destroy(gameObject);
         }
     }
 
-    private static GameObject Find(GameObject go)
+    private static GameObject Find(Object go)
     {
         Pool.TryGetValue(go.name, out var result);
         return result;
     }
 
-    private static GameObject Reuse(GameObject go, Vector3 position, Quaternion rotation)
+    private static GameObject Reuse(Object go, Vector3 position, Quaternion rotation)
     {
         var obj = Find(go);
 

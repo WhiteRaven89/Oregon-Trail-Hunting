@@ -15,7 +15,7 @@ public class Animal : MonoBehaviour
 
     public void Death()
     {
-        GameObject go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
+        var go = Instantiate(_deathPrefab, transform.localPosition, transform.localRotation, transform.parent);
         go.transform.localScale = transform.localScale;
 
         AudioManager.Instance.Play(Sound.ANIMAL_HIT);
