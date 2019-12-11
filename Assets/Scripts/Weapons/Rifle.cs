@@ -2,10 +2,6 @@
 
 public class Rifle : Weapon
 {
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-    }
 
     private void OnMouseDown()
     {

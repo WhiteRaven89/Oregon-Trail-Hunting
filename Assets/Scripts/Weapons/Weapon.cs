@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
         GameManager.Instance.ShotsFired++;
     }
 
-    protected virtual void Move(int sceneIndex)
+    private void Move(int sceneIndex)
     {
         var scene = GameManager.Instance.CurrentLevel.transform.GetChild(0).GetChild(sceneIndex).transform;
         transform.localPosition = new Vector2(scene.localPosition.x, transform.localPosition.y);
